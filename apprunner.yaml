@@ -1,0 +1,26 @@
+version: 1.0
+runtime: python3  # <- python version to use in runtime.
+
+build:
+  commands:
+    - pip install --no-cache-dir -r requirements.txt # <- installing dependencies
+
+run:
+  
+  command: python -m uvicorn main:app --host 0.0.0.0 --port 8000
+
+
+instance_configuration:
+  cpu: 1024 
+  memory: 2048 
+  environment_variables:
+    PYTHONDONTWRITEBYTECODE: "1"
+    PYTHONUNBUFFERED: "1"
+   
+
+healthcheck:
+  path: / 
+  interval: 10
+  timeout: 5
+  healthythreshold: 1
+  unhealthythreshold: 3
