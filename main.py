@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import uvicorn
 
 app = FastAPI(title="FastAPI Demo on AWS App Runner")
 
