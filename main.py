@@ -7,7 +7,7 @@ app = FastAPI(title="FastAPI Demo on AWS App Runner")
 @app.get("/")
 async def root():
     """Root endpoint returning a welcome message."""
-    return {"message": "Hello from FastAPI running on AWS App Runner!"}
+    return {"message": "Hi from FastAPI running on AWS App Runner!"}
 
 
 @app.get("/health")
